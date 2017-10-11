@@ -17,8 +17,7 @@ The project includes two packaged applications.
 
 ```
 > npm install
-> npm start (or Run via C9 IDE)
-
+> npm start
 ```
 
 # Using
@@ -57,3 +56,10 @@ The Story Editor application provides the following features:
 - Add / Remove character sprites as associated text scroll actions
 - Add / Remove image gallery files (backgrounds and character sprites)
 - Export copy of the story data file 
+
+## Creators
+
+- Ian Barnett
+- Deidre Ferreira
+- Tony Gorgioski
+- Ryan Kita
