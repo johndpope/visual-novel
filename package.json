@@ -1,0 +1,15 @@
+{
+  "name": "visual-novel",
+  "version": "1.0.0",
+  "description": "Visual Novel reader and story editor (for BITS The Fifth Door)",
+  "main": "server.js",
+  "repository": "",
+  "author": "Ian Barnett",
+  "license": "MIT",
+  "repository": {},
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "~4",
+    "express-fileupload": "^0.1.2"
+  }
+}

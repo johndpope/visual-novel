@@ -1,0 +1,141 @@
+body {
+    color: #fff;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 24pt;
+}
+
+body>div {
+	width: 1024px;
+	height: 768px;
+	margin-left: auto;
+	margin-right: auto;
+	background-size : cover;
+	background-repeat : no-repeat;
+	border: solid 3px grey;
+	border-radius: 5px;
+	position: relative;
+	background-color: black;
+	background-size: contain;
+	opacity: 0.9;
+}
+
+div.credits {
+	position: relative;
+}
+
+div.credits>div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.credit>div {
+    vertical-align: top;
+}
+
+@keyframes fade-through {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes stay-on {
+    0% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+#team-credits {
+	animation: fade-through 10s ease-in-out 1s 1;
+	
+    background-image: url('../images/AvatarJosephine.png');
+    background-repeat: no-repeat;
+    background-position: 10% 50%; 
+}
+
+#ref-credits-1 {
+	animation: fade-through 10s ease-in-out 10s 1;
+
+    background-image: url('../images/AvatarRyan.png');
+    background-repeat: no-repeat;
+    background-position: 90% 50%; 
+}
+
+#ref-credits-2 {
+	animation: fade-through 10s ease-in-out 20s 1;
+
+    background-image: url('../images/AvatarDee.png');
+    background-repeat: no-repeat;
+    background-position: 5% 50%; 
+}
+
+#ref-credits-3 {
+	animation: fade-through 10s ease-in-out 30s 1;
+
+    background-image: url('../images/AvatarIan.png');
+    background-repeat: no-repeat;
+    background-position: 97% 55%; 
+}
+
+#ref-credits-4 {
+	animation: fade-through 10s ease-in-out 40s 1;
+
+    background-image: url('../images/AvatarTony.png');
+    background-repeat: no-repeat;
+    background-position: 10% 50%; 
+}
+
+#end-credits {
+	animation: fade-in 5s ease-in-out 50s 1;
+	animation: stay-on 1s ease-in 50s infinite;
+
+    background-image: url('../images/AvatarTeamFramed.png');
+    background-repeat: no-repeat;
+    background-position: 52% 62%;
+    background-size: 50%;
+}
+
+.page {
+	height: 100%;
+	text-align: center;
+	position: relative;
+}
+
+.play-again {
+	right: 2em;
+	background: #4444aa;
+}
+
+.story-again {
+	left: 2em;
+	background: #44aa44;
+}
+
+.cta-again {
+	position: absolute;
+	bottom: 2em;
+	font-weight: bold;
+	font-size: large;
+	color: white;
+	border-radius: 10px;
+	font-family: Verdana;
+	width: 12em;
+	height: 3em;
+}
+    
+.leftright .credit div { display: inline-block; width: 45%; }
+.leftright .credit div:first-child { text-align: right; padding-right: 15px; font-weight: bold; }
+.leftright .credit div:last-child { text-align: left; padding-left: 15px; }
+
+.topbottom .credit div { width: 100%; text-align: center;}
+.topbottom .credit div:first-child { font-weight: bold; }
+.topbottom .credit div:last-child { margin-bottom: 20px; font-size: 18px;}

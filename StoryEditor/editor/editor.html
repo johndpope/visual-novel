@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Story Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/cover-icon.png">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/editor.css">
+  </head>
+
+  <body>
+    <div class="container">
+        
+      <div id="main-editor" class="row">
+        <h1 class="col-sm-12">Story Editor
+          <a href='/download'><img src='images/save-icon.png' class='pull-right save-icon'/></a>
+        </h1>
+
+        <!-- Page List -->
+        <div class="col-sm-12" id="page-list">
+          <div class="row">
+            <div class="col-sm-6" id="page-list-heading"><h2>Pages</h2></div>
+            <div class="col-sm-6" id="add-page-controls">
+              <div class="col-sm-12">
+                <div class="btn-group pull-right" role="group">
+                  <button type="button" id="add-page" class="btn btn-primary heading-action">Add Page</button>
+                  <button type="button" id="add-choice" class="btn btn-default heading-action">Add Choice</button>
+                  <button type="button" id="add-sidebar" class="btn btn-default heading-action">Add Sidebar</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12" id="page-list-group">
+              <div id="page-list-items" class="list-group"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page Add -->
+        <form class="form-horizontal col-sm-12 hidden" id="form-add-page">
+          <input type="hidden" id="add-page-type" />
+          
+          <div class="row">
+            <div class="col-sm-12"><h2 id="add-page-heading">Add ...</h2></div>
+          </div>
+          
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="row form-group">
+                <label for="add-page-image" class="col-sm-3 control-label">Background</label>
+                <div class="col-sm-9">
+                  <select id="add-page-image" name="add-page-image" class="form-control">
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group">
+                <label for="add-page-title" class="col-sm-3 control-label">Page Title</label>
+                <div class="col-sm-9">
+                  <input id="add-page-title" name="add-page-title" class="form-control title-case" />
+                </div>
+              </div>
+              <div class="row form-group hide-choice">
+                <label for="add-page-text" class="col-sm-3 control-label">Page Text</label>
+                <div class="col-sm-9">
+                  <textarea id="add-page-text" name="add-page-text" rows="6" class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="row form-group hide-page hide-sidebar">
+                <label for="add-page-question" class="col-sm-3 control-label">Choice Prompt</label>
+                <div class="col-sm-9">
+                  <input id="add-page-question" name="add-page-question" class="form-control"></input>
+                </div>
+              </div>
+              <div class="row form-group hide-page hide-sidebar">
+                <label for="add-page-choice-a" class="col-sm-3 control-label">Option A / B</label>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <input id="add-page-choice-a" name="add-page-choice-a" class="form-control"></input>
+                    </div>
+                    <div class="col-sm-6">
+                      <input id="add-page-choice-b" name="add-page-choice-b" class="form-control"></input>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-group hide-page hide-sidebar">
+                <label for="add-page-next-a" class="col-sm-3 control-label">Next Page A / B</label>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <select id="add-page-next-a" name="add-page-next-a" class="form-control next-page-select">
+                      </select>
+                    </div>
+                    <div class="col-sm-6">
+                      <select id="add-page-next-b" name="add-page-next-b" class="form-control next-page-select">
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-group hide-sidebar hide-choice">
+                <label for="add-page-next" class="col-sm-3 control-label">Next Page</label>
+                <div class="col-sm-9">
+                  <select id="add-page-next" name="add-page-next" class="form-control next-page-select">
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group hide-sidebar">
+                <label for="add-page-side" class="col-sm-3 control-label">Side Page</label>
+                <div class="col-sm-9">
+                  <select id="add-page-side" name="add-page-side" class="form-control side-page-select">
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-sm-offset-3 col-sm-9">
+                  <button type="submit" class="btn btn-primary">Save Page</button>
+                  <button type="button" class="btn" id="cancel-add-page">Cancel</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <img src="images/missing-image.png" id="add-page-image-preview" class="thumbnail" />
+            </div>
+          </div>
+        </form>
+
+        <!-- Page Edits -->
+        <form class="form-horizontal col-sm-12 hidden" id="form-edit-page">
+          <input type="hidden" id="edit-page-id" />
+          <input type="hidden" id="edit-page-type" />
+          
+          <div class="row">
+            <div class="col-sm-12"><h2 id="edit-page-heading">Edit ...</h2></div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="row form-group">
+                <label for="edit-page-image" class="col-sm-3 control-label">Background</label>
+                <div class="col-sm-9">
+                  <select id="edit-page-image" name="edit-page-image" class="form-control">
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group hide-cover">
+                <label for="edit-page-title" class="col-sm-3 control-label">Page Title</label>
+                <div class="col-sm-9">
+                  <input id="edit-page-title" name="edit-page-title" class="form-control title-case" />
+                </div>
+              </div>
+              <div class="row form-group hide-cover hide-choice">
+                <label for="edit-page-text" class="col-sm-3 control-label">Page Text</label>
+                <div class="col-sm-9">
+                  <textarea id="edit-page-text" name="edit-page-text" rows="6" class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="row form-group hide-cover hide-page hide-sidebar">
+                <label for="edit-page-question" class="col-sm-3 control-label">Choice Prompt</label>
+                <div class="col-sm-9">
+                  <input id="edit-page-question" name="edit-page-question" class="form-control"></input>
+                </div>
+              </div>
+              <div class="row form-group hide-cover hide-page hide-sidebar">
+                <label for="edit-page-choice-a" class="col-sm-3 control-label">Option A / B</label>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <input id="edit-page-choice-a" name="edit-page-choice-a" class="form-control"></input>
+                    </div>
+                    <div class="col-sm-6">
+                      <input id="edit-page-choice-b" name="edit-page-choice-b" class="form-control"></input>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-group hide-cover hide-page hide-sidebar">
+                <label for="edit-page-next-a" class="col-sm-3 control-label">Next Page A / B</label>
+                <div class="col-sm-9">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <select id="edit-page-next-a" name="edit-page-next-a" class="form-control next-page-select">
+                      </select>
+                    </div>
+                    <div class="col-sm-6">
+                      <select id="edit-page-next-b" name="edit-page-next-b" class="form-control next-page-select">
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-group hide-sidebar hide-choice">
+                <label for="edit-page-next" class="col-sm-3 control-label">Next Page</label>
+                <div class="col-sm-9">
+                  <select id="edit-page-next" name="edit-page-next" class="form-control next-page-select">
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group hide-cover hide-sidebar">
+                <label for="edit-page-side" class="col-sm-3 control-label">Side Page</label>
+                <div class="col-sm-9">
+                  <select id="edit-page-side" name="edit-page-side" class="form-control side-page-select">
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group hide-cover hide-sidebar hide-choice">
+                <label class="col-sm-3 control-label">Actions</label>
+                <div class="col-sm-9" id="edit-page-actions">
+                </div>
+              </div>
+              <div class="row collapse" id="add-action">
+                <div class="col-sm-12">
+                  <div class="row form-group">
+                    <label class="col-sm-3 control-label">Action Character</label>
+                    <div class="col-sm-9">
+                      <select id="add-action-image" name="add-action-image" class="form-control">
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <label class="col-sm-3 control-label">Trigger / Position</label>
+                    <div class="col-sm-2">
+                      <select id="add-action-trigger" name="add-action-trigger" class="form-control">
+                        <option />
+                        <option value="text:1">Para 1</option>
+                        <option value="text:2">Para 2</option>
+                        <option value="text:3">Para 3</option>
+                        <option value="text:4">Para 4</option>
+                        <option value="text:5">Para 5</option>
+                        <option value="text:6">Para 6</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-5">
+                      <select id="add-action-classes" name="add-action-classes" class="form-control">
+                        <option />
+                        <option value="left">Stage Left</option>
+                        <option value="center">Stage Centre</option>
+                        <option value="right">Stage Right</option>
+                      </select>
+                  </div>
+                    <div class="col-sm-2">
+                      <button type="button" class="btn btn-primary" id="do-add-action">Add</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-sm-offset-3 col-sm-9">
+                  <button type="submit" class="btn btn-primary" id="do-update-page">Save Page</button>
+                  <button type="button" class="btn" id="cancel-edit-page">Cancel</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <img src="images/missing-image.png" id="edit-page-image-preview" class="thumbnail" />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="image-gallery" class="row">
+        <h2 class="col-sm-12">Image Gallery</h2>
+        
+        <div id="backgrounds" class="col-sm-6">
+          <form class="form-horizontal btn-file-form" name="uploadBackgroundImages" action="/upload/background" enctype="multipart/form-data" method="post">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group">
+                    <label class="input-group-btn">
+                      <span class="btn btn-primary">
+                        Add Background… <input type="file" name="imageFile" style="display: none;" multiple="">
+                      </span>
+                    </label>
+                    <input type="text" id="echoBackgroundFileName" class="form-control" readonly="">
+                    <span class="input-group-btn">
+                      <input type="submit" name="Submit" class="btn btn-default"/>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="characters" class="col-sm-6">
+          <form class="form-horizontal btn-file-form" name="uploadCharacterImages" action="/upload/character" enctype="multipart/form-data" method="post">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group">
+                    <label class="input-group-btn">
+                      <span class="btn btn-primary">
+                        Add Character… <input type="file" name="imageFile" style="display: none;" multiple="">
+                      </span>
+                    </label>
+                    <input type="text" id="echoCharacterFileName" class="form-control" readonly="">
+                    <span class="input-group-btn">
+                      <input type="submit" name="Submit" class="btn btn-default"/>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+    
+        <div class="col-sm-6">
+          <div class="row gallery background" id="background-image-grid">
+          </div>
+        </div>
+    
+        <div class="col-sm-6">
+          <div class="row gallery character" id="character-image-grid">
+          </div>
+        </div>
+      </div>
+
+    </div>
+        
+    <script src="scripts/vendor/jquery.min.js"></script>
+    <script src="scripts/vendor/bootstrap.min.js"></script>
+    
+    <script src="scripts/editor.js"></script>
+  </body>
+</html>

@@ -1,0 +1,292 @@
+body {
+    color: #000022;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 24pt;
+}
+
+body>div {
+	width: 1024px;
+	height: 768px;
+	margin-left: auto;
+	margin-right: auto;
+	background-size : cover;
+	background-repeat : no-repeat;
+	border: solid 3px grey;
+	border-radius: 5px;
+	position: relative;
+}
+
+.cover-authors {
+    color: white;
+    position: absolute;
+    bottom: 2em;
+    left: 0.6em;
+    font-size: 0.6em;
+}
+
+.authors {
+    height: 20px;
+    margin-right: 5px;
+    margin-bottom: -3px;
+    border-radius: 5px;
+}
+
+.start-btn, #end {
+    cursor: pointer;
+}
+
+#text {
+    z-index: 100;
+    text-align: center;
+    line-height: 1.4em;
+    padding-bottom: 10px;
+	width: 27.5em;
+    height: 4em;
+    border: solid black 5px;
+    border-radius: 15px;
+    opacity: .8;	
+	position: absolute;
+	left: 0.3em;
+	bottom: 0.3em;
+    background-color: #FFFFFF;
+}
+
+.textScroll {
+    z-index: 101;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    border: solid black 5px;
+    border-radius: 15px;
+    opacity: .95;
+	position: absolute;
+	right: 0.3em;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+#prevText {
+	bottom: 3.35em;
+}
+
+#moreText {
+	bottom: 0.3em;
+}
+
+.pageTurn {
+    z-index: 101;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0 5px 5px;
+	width: 1.2em;
+    border: solid black 5px;
+    border-radius: 15px;
+    opacity: .20;
+	position: absolute;
+	bottom: 12em;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.pageTurn:hover {
+    opacity: .80;
+}
+
+.nextPage {
+	right: 0.5em;
+}
+
+.lastPage {
+	left: 0.5em;
+}
+
+.quick-btn:hover {
+    opacity: 1;
+}
+
+.quick-btn {
+    z-index: 101;
+	position: absolute;
+	top: 0.5em;
+	width: 40px;
+	height: 40px;
+    padding: 5px;
+    opacity: 0.1;
+    background-color: white;
+    border: solid black 5px;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.quick-btn>img {
+    width: 100%;
+}
+
+#quickRestart {
+	left: 0.5em;
+}
+
+#quickRestart:hover {
+    background-color: red;
+}
+
+#quickBookmark  {
+	left: 3em;
+}
+
+.bookmark-set {
+    background-color: #8888ff;
+}
+
+#question {
+    z-index: 100;
+    text-align: center;
+    line-height: 1.4em;
+    padding-bottom: 10px;
+	width: 27.5em;
+    height: 2.4em;
+    border: solid black 5px;
+    border-radius: 15px;
+    opacity: .8;	
+	position: absolute;
+	left: 2em;
+	bottom: 2.6em;
+    background-color: #FFFFFF;
+}
+
+.choice {
+    z-index: 101;
+    text-align: center;
+    padding-bottom: 10px;
+	width: 12em;
+    height: 1.4em;
+    border: solid black 5px;
+    border-radius: 15px;
+    opacity: .8;	
+	position: absolute;
+	bottom: 0.3em;
+}
+#optionA.choice {
+    background-color: #88FF44;
+	left: 2em;
+    cursor: pointer;
+}
+#optionB.choice {
+    background-color: #88FF44;
+	right: 2em;
+    cursor: pointer;
+}
+
+.sidepage-btn {
+    z-index: 101;
+	width: 3em;
+    height: 3em;
+    opacity: .80;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+    background: no-repeat url(../images/dream-bubble-icon.png);
+    background-size: contain;
+    cursor: pointer;
+}
+
+.restart-btn {
+    background-color: #BB4444;
+	left: 1em;
+}
+
+.credits-btn {
+    background-color: #44BB44;
+	right: 1em;
+}
+
+.start-btn {
+    background-color: #44BB44;
+	right: 1em;
+}
+
+.cta-btn {
+    z-index: 101;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+	width: 5em;
+    height: 1.2em;
+    border: solid black 5px;
+    border-radius: 15px;
+    opacity: 1;
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes do-fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes do-fade-out {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.x-fade-in {
+	animation: do-fade-in 3s ease-out 1;
+}
+
+.x-fade-out {
+	animation: do-fade-out 3s ease-out 1;
+}
+
+.sprite {
+    z-index: 50;
+    position: absolute;
+    bottom: 144px;
+    width: 600px;
+}
+
+.x-left {
+    left: 0px;
+}
+
+.x-right {
+    left: 424px;
+}
+
+.x-center {
+    left: 212px;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 30px solid black;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 30px solid black;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-left: 30px solid black;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent; 
+  border-right: 30px solid black; 
+}

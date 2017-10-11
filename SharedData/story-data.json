@@ -1,0 +1,665 @@
+{
+  "cover": {
+    "background": "Novel Title.png",
+    "next": "home-sweet-home"
+  },
+  "sides": {
+    "decision-battlefield": {
+      "id": "decision-battlefield",
+      "background": "Dream Sequence.png",
+      "title": "Decision Battlefield",
+      "text": [
+        "You blink and drift away into your thoughts. You see home but it feels distant somehow. Ahead you see a bird, huge with large black wheels for feet!",
+        "The air is filled with whistling sounds. All about you bombs explode on the ground revealing strange creatures.",
+        "Some are cuddly looking bears calling you back home. The others are weird four legged suitcases making a path for you toward the bird.",
+        "You feel yourself sinking into the ground and need to decide. Where next?"
+      ],
+      "next": "",
+      "actions": []
+    },
+    "catapult-escape": {
+      "id": "catapult-escape",
+      "background": "Dream Sequence.png",
+      "title": "Catapult Escape",
+      "text": [],
+      "next": ""
+    },
+    "destination-no-wifi": {
+      "id": "destination-no-wifi",
+      "background": "Dream Sequence.png",
+      "title": "Destination No Wifi",
+      "text": [],
+      "next": ""
+    },
+    "zombie-teachers": {
+      "id": "zombie-teachers",
+      "background": "Dream Sequence.png",
+      "title": "Zombie Teachers",
+      "text": [],
+      "next": ""
+    },
+    "groupies": {
+      "id": "groupies",
+      "background": "Dream Sequence.png",
+      "title": "Groupies",
+      "text": [],
+      "next": ""
+    }
+  },
+  "choices": {
+    "time-to-go---leave-or-stay": {
+      "id": "time-to-go---leave-or-stay",
+      "background": "Time2GoLorS.png",
+      "title": "Time To Go - Leave Or Stay?",
+      "question": "Torn between your family, and the home and friends you know, you decide to?",
+      "optionA": "Leave with Family",
+      "optionB": "Stay with Friends",
+      "nextA": "Take Flight-with-family",
+      "nextB": "stay-with-friends",
+      "side": "",
+      "actions": []
+    },
+    "new-home---settle-in": {
+      "id": "new-home---settle-in",
+      "background": "New Home.jpeg",
+      "title": "New Home - Settle In?",
+      "question": " You walk in the front door, drop your bags and it suddenly seems real, do you?",
+      "optionA": "Reluctantly Settle In",
+      "optionB": "Escape Back Home",
+      "nextA": "first-day-of-school",
+      "nextB": "runaway",
+      "side": "",
+      "actions": []
+    },
+    "stay-with-family-or-return-home": {
+      "id": "stay-with-family-or-return-home",
+      "background": "Central Station.jpg",
+      "title": "Stay With Family Or Return Home?",
+      "question": "You struggle with returning to your new home or your old home...",
+      "optionA": "Missing Mum and Dad",
+      "optionB": "Fly Home Alone",
+      "nextA": "first-day-of-school",
+      "nextB": "stay-with-friends",
+      "side": "",
+      "actions": []
+    },
+    "cool-kids-or-musical-wallflower": {
+      "id": "cool-kids-or-musical-wallflower",
+      "background": "_placeholder.jpg",
+      "title": "Cool Kids Or Musical Wallflower?",
+      "question": " You flip through your music portfolio and then the FriendBook pages of the cool kids...",
+      "optionA": "Join the Music Club",
+      "optionB": "Message the Cool Kids",
+      "nextA": "the-end",
+      "nextB": "cool-kids-at-the-mall",
+      "side": "",
+      "actions": []
+    },
+    "register-for-talent-quest": {
+      "id": "register-for-talent-quest",
+      "background": "_placeholder Choice.jpg",
+      "title": "Register For Talent Quest?",
+      "question": " The cool kids move on but you hold the entry form, will you..",
+      "optionA": "Register for Quest",
+      "optionB": "Skip It",
+      "nextA": "famous-i",
+      "nextB": "the-end",
+      "side": "",
+      "actions": []
+    },
+    "move-to-capital-city-or-stay": {
+      "id": "move-to-capital-city-or-stay",
+      "background": "_placeholder Choice.jpg",
+      "title": "Move To Capital City Or Stay",
+      "question": "The record company wants you, in Capital City! Will you...",
+      "optionA": "Pack for the City",
+      "optionB": "Stay and Play",
+      "nextA": "the-end",
+      "nextB": "stay-and-play-i",
+      "side": "",
+      "actions": []
+    }
+  },
+  "pages": {
+    "home-sweet-home": {
+      "id": "home-sweet-home",
+      "background": "Scene5BGB.png",
+      "title": "Home Sweet Home I",
+      "text": [
+        "School is out, finally. You drag yourself from bed. There’s no rush today. Bowl of cereal and a warm mug of chocolate at your side.",
+        "You’re flicking through FriendBook posts. ‘Argh!’, you groan and take a deep breath to yell, ‘Mum!’",
+        "The net’s on the blink! Why is it so hard to make your parents understand how important a good connection is? Dee is going to think you’re ignoring her. ‘Mum!’"
+      ],
+      "next": "school-break-at-the-shops",
+      "side": "",
+      "actions": [
+        {
+          "image": "1HomeSweetHomeA.png",
+          "trigger": "text:1",
+          "position": "center"
+        },
+        {
+          "image": "1HomeSweetHomeB.png",
+          "trigger": "text:2",
+          "position": "center"
+        },
+        {
+          "image": "1HomeSweetHomeA.png",
+          "trigger": "text:3",
+          "position": "center"
+        }
+      ]
+    },
+    "school-break-at-the-shops": {
+      "id": "school-break-at-the-shops",
+      "background": "Scene2BG.png",
+      "title": "Home Sweet Home II",
+      "text": [
+        "Mum has called for an Internet repair tech. Seeing your utter unhappiness she suggests you head to the mall to access their wifi.",
+        "You’re happy about that and decide to push for a shopping budget. Mum agrees but this means you’ve got company. ‘Ugh’, you sigh but you smile anyway.",
+        "At least you’ll get some new clothes and ditch the old rags. You fire off a quick text \nmessage to your besty and look forward to meeting her there.",
+        "‘Hey Dee’, a happy sigh of relief escapes as you finally meet up."
+      ],
+      "next": "teacher-sends-portfolio",
+      "side": "",
+      "actions": [
+        {
+          "image": "2SchoolBreakAtShops.png",
+          "trigger": "text:1",
+          "position": "right"
+        },
+        {
+          "image": "2SchoolBreakAtShopsB.png",
+          "trigger": "text:2",
+          "position": "center"
+        },
+        {
+          "image": "2SchoolBreakAtShopsC.png",
+          "trigger": "text:3",
+          "position": "left"
+        },
+        {
+          "image": "2SchoolBreakAtShopsD.png",
+          "trigger": "text:4",
+          "position": "left"
+        }
+      ]
+    },
+    "teacher-sends-portfolio": {
+      "id": "teacher-sends-portfolio",
+      "background": "TeachSendsPortfilioBG.png",
+      "title": "Home Sweet Home III",
+      "text": [
+        "You arrive home late in the afternoon. Tired from a good shopping trip but satisfied from your long catch up with Dee.",
+        "Mum’s not impressed your managed to keep dodging her most of the time. But at least the net is back on at home, ‘Full strength, yeah!’.",
+        "‘Hey munchkin! Delivery for you’, dad calls out from his study.\n‘That’s weird’, you think, since he’s usually at work on Saturdays.",
+        "You grab your package and yell your thanks as you check your parcel for attempted opening. Parent’s can be so nosey!"
+      ],
+      "next": "cats-out-of-the-bag",
+      "side": "",
+      "actions": [
+        {
+          "image": "3teachSendsPortfilio.png",
+          "trigger": "text:1",
+          "position": "center"
+        },
+        {
+          "image": "3teachSendsPortfilio.png",
+          "trigger": "text:2",
+          "position": "center"
+        },
+        {
+          "image": "3teachSendsPortfilio.png",
+          "trigger": "text:3",
+          "position": "center"
+        },
+        {
+          "image": "3teachSendsPortfilio.png",
+          "trigger": "text:4",
+          "position": "center"
+        }
+      ]
+    },
+    "cats-out-of-the-bag": {
+      "id": "cats-out-of-the-bag",
+      "background": "scene4BG.png",
+      "title": "Moving Home I",
+      "text": [
+        "‘How was school, will you miss your friends?’, your neighbour William asks. You mumble it was ok and wonder why he said that about your friends.",
+        "It’s only a few weeks until school is back. Your mother frowns slightly at his last comment but before she can say anything the bombshell hits.",
+        "‘We'll miss you when you're gone’, he says. Your world is crumbling. Your mum hushes him but too late. ‘Mum? Dad?’, looking to them, pleading for it not to be true.",
+        "You start looking around the table and see now that everyone knows something, except you. How could they make plans to move and not tell you?",
+        "Weak at the knees you leave the table and run home in shock."
+      ],
+      "next": "please-explain",
+      "side": "",
+      "actions": [
+        {
+          "image": "4CatsOutTheBagA.png",
+          "trigger": "text:1",
+          "position": "center"
+        },
+        {
+          "image": "4CatsOutTheBagB.png",
+          "trigger": "text:2",
+          "position": "center"
+        },
+        {
+          "image": "4CatsOutTheBagC.png",
+          "trigger": "text:3",
+          "position": "center"
+        },
+        {
+          "image": "4CatsOutTheBagC.png",
+          "trigger": "text:4",
+          "position": "center"
+        }
+      ]
+    },
+    "please-explain": {
+      "id": "please-explain",
+      "background": "Scene5BGB.png",
+      "title": "Moving Home II",
+      "text": [
+        "You wake feeling exhausted. After crying yourself to sleep you now seek familiar comforts. Your snuggie and wooly slippers. Your cat, despite his protests.",
+        "Not even hot chocolate will cheer you up today. Still chatting with your BF you put your phone down as your parents come into the room.",
+        "‘We wanted to tell you sooner’, mum pleads and looks to father for support. ‘We didn’t know how sweetie and we’ve been so busy preparing’, dad explains.",
+        "You are partly confused and partly angry that they did not tell you sooner. They explain that dad got a job offer too good to refuse.",
+        "But it’s in another part of the country and you have to relocate. Oh my, how you will miss your best friend."
+      ],
+      "next": "farewells",
+      "side": "",
+      "actions": [
+        {
+          "image": "Scene5Sprite600pxD.png",
+          "trigger": "text:1",
+          "position": "center"
+        },
+        {
+          "image": "5 Please Explain B.png",
+          "trigger": "text:2",
+          "position": "center"
+        },
+        {
+          "image": "Scene5Sprite600pxD.png",
+          "trigger": "text:3",
+          "position": "center"
+        },
+        {
+          "image": "Scene5Sprite600pxD.png",
+          "trigger": "text:4",
+          "position": "center"
+        },
+        {
+          "image": "Scene5Sprite600pxD.png",
+          "trigger": "text:5",
+          "position": "center"
+        }
+      ]
+    },
+    "farewells": {
+      "id": "farewells",
+      "background": "Farewells.png",
+      "title": "Moving Home III",
+      "text": [
+        "You see Dee in the mall and run to her. Hugging like you will never see each other again you finally part and wipe away each other’s tears.",
+        "You resolve to go to the smoothie bar and replenish lost fluids - and laugh heartily about that. You explain in gory detail everything you know.",
+        "Dee has a million questions most that you simply cannot answer. You explain how you will send her a thousand FB posts and stay in touch every single day.",
+        "Dee chuckles and you know everything will be alright. You start shopping and give each other farewell presents, something to focus on for times to come."
+      ],
+      "next": "time-to-go---leave-or-stay",
+      "side": "decision-battlefield",
+      "actions": []
+    },
+    "stay-with-friends": {
+      "id": "stay-with-friends",
+      "background": "StayWithFriends1.png",
+      "title": "Stay With Friends I",
+      "text": [
+        "Dropping your backpack to the ground you rub your sore shoulder. Knocking at the door you feel tired and hungry and almost collapse as the door opens.",
+        "‘Dear child, come in, come in!’, you gratefully sink into a chair. Your story explained, Dee’s parents nod quietly and Dee sits with you waiting silently.",
+        "At first they protest and insist on getting you home. Your tears make them reconsider. Dee takes you upstairs where you talk until you fall asleep.",
+        "You wake to find you slept through the night. Coming downstairs you find Dee and her parents sitting quietly at the table.",
+        "Your heart aches. ‘It’s highly unusual and your parent’s are very upset’, they start, ‘but they agreed that you can stay with us for a while’.",
+        "Tears of joy start and you hug Dee tightly."
+      ],
+      "next": "goodbye-mum-and-dad",
+      "side": "",
+      "actions": []
+    },
+    "goodbye-mum-and-dad": {
+      "id": "goodbye-mum-and-dad",
+      "background": "GoodbyeMumDad.png",
+      "title": "Stay With Friends II",
+      "text": [
+        "‘Thanks mum, thanks Dad’, you say finally with a big sigh of relief. The next words come less easily and a tear starts as you tell them you love them.",
+        "You will see them next school break and promise to do as Dee’s parents ask in the meantime. You feel so much older and more responsible now without mum and dad around.",
+        "Yet somehow you have never felt more like a small helpless child. You take a deep breath and hang up the call."
+      ],
+      "next": "the-end",
+      "side": "",
+      "actions": []
+    },
+    "Take Flight-with-family": {
+      "id": "Take Flight-with-family",
+      "background": "TakeFlightFamily.png",
+      "title": "Take Flight With Family I",
+      "text": [
+        "It’s not forever, and it might be exciting. You try to convince yourself that it will be ok.",
+        "After chatting with Dee you start getting excited about what this change of scenery might be like. You start exploring the destination city online.",
+        "You discover so many places to check out. Dee actually signed you up to a music lover’s group and insists you tell her all about it when you arrive.",
+        "You look at your room and the yard you grew up and wonder what the new home will be like. Moss looks up at you with half closed eyes as his tail wraps around your leg.",
+        "‘And you mister, you better not rough up the local cats!’, he humphs lazily as you pick him up and hold him close."
+      ],
+      "next": "friendbook-farewells",
+      "side": "",
+      "actions": []
+    },
+    "friendbook-farewells": {
+      "id": "friendbook-farewells",
+      "background": "friendbook farewells.png",
+      "title": "Take Flight With Family II",
+      "text": [
+        "Your FriendBook page already has 280 followers, whoa! You didn’t realise you knew that many people. Family, neighbours, friends, school kids!",
+        "People you know from social clubs, band practice, some of the teachers and even people from the music group Dee signed you up for.",
+        "You set about making it the best 'Relocation Journal of Me' that you know of, actually it’s the only one you know!",
+        "You reminisce about all the places and people you know and create pages to celebrate all the good times and the some 'not so good' times.",
+        "With reflections done you turn to the possibilities of your new home.",
+        "Adding images of the new house, neighbourhood, school and shopping mall you start getting excited like you’re going on a holiday trip.",
+        "Dee suggests you go a step further and edit images of yourself into the images of the new places.",
+        "Wow, now you really can picture yourself there. You will never find a friend as good as Dee again."
+      ],
+      "next": "a-wing-and-a-prayer",
+      "side": "",
+      "actions": []
+    },
+    "a-wing-and-a-prayer": {
+      "id": "a-wing-and-a-prayer",
+      "background": "AWingNPrayer.png",
+      "title": "Take Flight With Family III",
+      "text": [
+        "‘This is your captain speaking…’, the voice drones but you’re not listening. The mad rush of getting to the airport and through check-in has exhausted you.",
+        "Your home town slips away below as you recline your seat. Your heart sinks with each passing cloud as you close the blind to reduce the glare and the pain.",
+        "‘Are you ok sweetie?’ You look over at your dad with his worried look and you give him the smile that you know will put him at rest.",
+        "On FriendBook you keep flipping through pictures with your bestie trying to smile. The wifi connection signal drops and you feel frustrated and angry.",
+        "You slip into sleep and know that your life will be changed forever when you wake up again."
+      ],
+      "next": "new-home---settle-in",
+      "side": "",
+      "actions": []
+    },
+    "runaway": {
+      "id": "runaway",
+      "background": "RunAway.png",
+      "title": "Runaway I",
+      "text": [
+        "Your parents begin to unpack boxes and sort out the new home. It feels large and empty and you don’t like it. Mum calls out, ‘Unpack your stuff sweetie’.",
+        "You mumble and make your way to your new room. Slumping to the bed you realize you have to leave, tonight! Quietly you start to pack your backpack.",
+        "After a long day of moving the family is exhausted and your parents go to bed. You take your bag and leave through the back door into the night."
+      ],
+      "next": "runaway-bus",
+      "side": "",
+      "actions": []
+    },
+    "runaway-bus": {
+      "id": "runaway-bus",
+      "background": "RunAwayBus.png",
+      "title": "Runaway II",
+      "text": [
+        "You leave the house, walking at first, but then you start to run. Before you know it you have sprinted three blocks away. You stop to catch your breath.",
+        "At this point you notice you are near a bus stop. A downtown bus is approaching. ‘Perfect’, you think.",
+        "You board the bus and ask the driver for a ticket into town. You take your ticket and you find a seat at the back.",
+        "Scrolling through your phone you are tempted to call mum. Instead you call Dee and settle back into the seat as the bus powers on."
+      ],
+      "next": "cold-night-out",
+      "side": "",
+      "actions": []
+    },
+    "cold-night-out": {
+      "id": "cold-night-out",
+      "background": "ColdNightOut.png",
+      "title": "Runaway III",
+      "text": [
+        "You reach the downtown bus depot and expect the city to be lively and busy but it isn’t. You step off the bus and no one is around.",
+        "You regret your decision to run away as you look around and see no one. ‘Hello’ you say, ‘anyone there?’ but no one responds.",
+        "It’s a cold windy night and you have no way to get out of here or home. You walk vainly around the block to see what is around or find anyone to help you.",
+        "You find a secluded bench and collapse onto it tired from walking. Putting your feet up you fall asleep thinking how foolish your decision was."
+      ],
+      "next": "stay-with-family-or-return-home",
+      "side": "",
+      "actions": []
+    },
+    "first-day-of-school": {
+      "id": "first-day-of-school",
+      "background": "FirstDaySchool.png",
+      "title": "New School I",
+      "text": [
+        "The car stops outside the new school. As you get out mum stops you. ‘Have a good day love. Don’t be shy, make some new friends!’, she smiles, comforting.",
+        "You shoulder your bag and close the door. ‘See ya mum. I'll try’. The thought of making friends from scratch is daunting. You miss your old friends.",
+        "The other kids make their way to their lockers and classes. Feeling nervous and completely lost you navigate the corridors finding your class just in time."
+      ],
+      "next": "the-new-kid-in-class",
+      "side": "",
+      "actions": []
+    },
+    "the-new-kid-in-class": {
+      "id": "the-new-kid-in-class",
+      "background": "TheNewKid.png",
+      "title": "New School II",
+      "text": [
+        "You take your seat and your new teacher enters the room. But before starting the lesson Mr. Smith introduces you to the class.",
+        "‘Hello class. Please make our new student here feel comfortable at Gimble High’. Awkwardly you smile and glance around the classroom.",
+        "Some of the students smile back and say hello and others just continue with their work. Embarrasing moment over you relax and open your book.",
+        "Feeling a little more comfortable now, still you feel the scrutiny as your classmates quietly judge you. The bells rings and you take a breath."
+      ],
+      "next": "lunch-break",
+      "side": "",
+      "actions": []
+    },
+    "lunch-break": {
+      "id": "lunch-break",
+      "background": "LunchBreak.png",
+      "title": "New School III",
+      "text": [
+        "The lunch bell rings and a jubilant hubbub sounds as the class rooms empty. It’s lunch time. You make your way outside to find a quiet spot to eat.",
+        "You start to notice the various groups, their turf and activities. Outside there's more action than in any class room for sure.",
+        "You find an empty bench in between the basketball courts and the grass oval and you sit down. ‘I’ll never fit in here’ you say to yourself'.",
+        "As you finish your lunch, the general school yard noise is interrupted by sweet guitar sounds coming from a nearby tree.",
+        "You watch the group of students singing and laughing, quietly wishing you were with them and sharing a few tunes and laughs."
+      ],
+      "next": "first-friends",
+      "side": "",
+      "actions": []
+    },
+    "first-friends": {
+      "id": "first-friends",
+      "background": "FirstFriends.png",
+      "title": "New School IV",
+      "text": [
+        "Still watching the music group playing under the tree, another group of students approach you. ‘Hey, you're the new kid right?’",
+        "You're suddenly distracted and turn to face the group. ‘Hey. Yeah, that’s me’, you respond going for confident but not overly keen.",
+        "‘I really like your hair’, says one of the kids. ‘Thanks', you smile meekly and continue, 'It's a bit of a popular style back home'.",
+        "‘What type of music do you like?’, she follows up. You take a moment to think about it and take another glance at the music group."
+      ],
+      "next": "cool-kids-or-musical-wallflower",
+      "side": "",
+      "actions": []
+    },
+    "cool-kids-at-the-mall": {
+      "id": "cool-kids-at-the-mall",
+      "background": "CoolKidsMall.png",
+      "title": "Fun At The Mall I",
+      "text": [
+        "Standing outside the mall sipping your juice, you take in the sounds of a busker playing nearby. Your feet tap away to the rhythm.",
+        "Stacey and the other kids approach you from behind and surprise you. ‘Hey, you should come with us!’, Stacey demands.",
+        "‘Where to?’, you ask the group hesitating, wanting to enjoy the music longer. ‘There's a new store that just opened. We simply have to go!’, she says.",
+        "‘Come on, I can’t wait!’, says Bradly in excitement. ‘Yeah, okay’, you say a little unsure, as Stacey herds you away to the new store.",
+        "‘This is going to be the greatest’, Stacey squeals."
+      ],
+      "next": "store-opening",
+      "side": "",
+      "actions": []
+    },
+    "store-opening": {
+      "id": "store-opening",
+      "background": "StoreOpening.png",
+      "title": "Fun At The Mall II",
+      "text": [
+        "The kids descend on the store and crowd the clothing racks. You follow slowly, glancing around the store, not as intensely as the others.",
+        "The store is jam packed! You can barely hear the excited chatter about the clothes. ‘I love this!', one says. ‘This bag is perfect!’, says another.",
+        "Stacey taps you on the shoulder, parading a hat she asks, ‘How cool is this?’. You smile and nod excitedly for her as she rushes on.",
+        "You start slowly flicking through the racks, half interested but more keen on the buzz in the store and the chatter from your new friends."
+      ],
+      "next": "talent-quest-in-the-mall",
+      "side": "",
+      "actions": []
+    },
+    "talent-quest-in-the-mall": {
+      "id": "talent-quest-in-the-mall",
+      "background": "TalentQuestMall.png",
+      "title": "Fun At The Mall III",
+      "text": [
+        "After bagging a few bargains at the new store the group heads off. Stacey idly mentions, ‘There is a talent quest here today I heard’.",
+        "This gets your attention and the others are curious too. ‘Here? Today? We should check it out!’, they say. The group goes in search of the stage.",
+        "Nearing the talent quest you see people gathering to watch and some keen to sign up. ‘How do you sign up for this?’, you ask a little too keenly.",
+        "‘Look who has talent!’, Stacey jokes to the others. ‘I’m just curious, not that I want to sign up’, you say. ‘Here you go’, Stacey hands you a form and you blush.",
+        "‘C'mon everyone let's get some food!', Stacey looks back and sees you lingering and calls, 'C'mon!' The group keeps walking but you stay and wonder what if.."
+      ],
+      "next": "register-for-talent-quest",
+      "side": "",
+      "actions": []
+    },
+    "famous-i": {
+      "id": "famous-i",
+      "background": "_placeholder.jpg",
+      "title": "Famous I",
+      "text": [
+        "You finish tuning your guitar in time to be called up on stage. Closing your eyes and breathing deeply you start to play one of your own songs.",
+        "Opening your eyes you see eveyone smiling and listening intently. You're getting into your zone and the crowd fades away and the melody fills you.",
+        "You're bringing the song to a close and somone in the crowd catches your eye. He’s unlike everyone else, dressed up and not swaying like the rest.",
+        "He speaks with the lady at the registration desk. The lady seems excited and smiles at you as she takes a card from the man and he walks away.",
+        "As you finish and walk off stage to a thunderous round of applause, the lady takes you by the arm and gives you the man's card. 'You're in luck!', she says.",
+        "'Thanks!', you take the card and head home, excited and just a little bit curious about the stranger."
+      ],
+      "next": "famous-ii",
+      "side": "",
+      "actions": []
+    },
+    "famous-ii": {
+      "id": "famous-ii",
+      "background": "_placeholder.jpg",
+      "title": "Famous II",
+      "text": [
+        "Your parents listen carefully as you tell them about your first day at school and the talent competition at the mall. They are so relieved you made new friends.",
+        "You tell them about your performance and the strange man and his card. 'This could be a good opportunity, what do you think mum, dad?'",
+        "'Give me a minute', dad says and takes the card into his study. You wait quietly with mum, and dad emerges soon after. 'Ok. We have a meeting tomorrow at midday'",
+        "You're so excited. Is it a gig, a scholarship, a band. Your mind races, you have to call Dee. You run to your room and call Dee to tell her the news."
+      ],
+      "next": "famous-iii",
+      "side": "",
+      "actions": []
+    },
+    "famous-iii": {
+      "id": "famous-iii",
+      "background": "_placeholder.jpg",
+      "title": "Famous III",
+      "text": [
+        "The stranger was a talent scout for a mjor recording label. He says that you are just what he’s been looking for. They ask if you record a test tape before you go.",
+        "Other adults are talking to your mum and dad as they usher you into the recording booth. After the recording mum hugs you closely, 'I’m so proud of you!”, she says.",
+        "The man and dad shake hands and exchange papers. 'They want to offer you a recording contract', dad says, 'In Capital City!' Mum squeals and you are speechless.",
+        "You are so excited, but also filled with dread at the prospect. 'It’s up to you sweetie', dad says. Mum and dad exchange nervous glances but you barely notice it."
+      ],
+      "next": "move-to-capital-city-or-stay",
+      "side": "",
+      "actions": []
+    },
+    "stay-and-play-i": {
+      "id": "stay-and-play-i",
+      "background": "_placeholder.jpg",
+      "title": "Stay And Play I",
+      "text": [
+        "Despite the temptation you call the studio and decline their offer. You let go of the big recording contract but somehow feel more free now to choose your way.",
+        "You’re still a minor celebrity in town and get a few interviews to tell your story. There are a few local gigs you now enjoy. But you need to refocus on school.",
+        "Unfortunately dad’s focus on supporting you meant he lost his job. Just as things look dire you’re awarded a scholarship, and mum finds work at the school."
+      ],
+      "next": "stay-and-play-ii",
+      "side": "",
+      "actions": []
+    },
+    "stay-and-play-ii": {
+      "id": "stay-and-play-ii",
+      "background": "_placeholder.jpg",
+      "title": "Stay And Play II",
+      "text": [
+        "Every gig is the same. You start out great and then get stage nerves. The rest of the band are ok. Stage fright keeps plaguing you and you have no idea what to do.",
+        "You chat with Dee and she encourages you, as does mum and dad. You just can’t see how to push through and it’s getting you down.",
+        "Out of the blue you receive a welcome call from your old music teacher. He’s been transferred to your new school. He's always known what to do.",
+        "You are so happy. He offers to coach you through the stage jitters and things are looking up again."
+      ],
+      "next": "stay-and-play-iii",
+      "side": "",
+      "actions": []
+    },
+    "stay-and-play-iii": {
+      "id": "stay-and-play-iii",
+      "background": "_placeholder.jpg",
+      "title": "Stay And Play III",
+      "text": [
+        "It’s that time of year. The school musical is here and it’s your time to shine. The band has practiced through summer and you’re all set.",
+        "You open your guitar case and check over the guitar. Your guitar has been sabotaged! It’s too badly damaged to play with. What are you going to do?",
+        "You frantically try to call your parents, your friend, the teacher but no-one is available. You see an acoustic guitar, thinking ‘why not?’, you take it and get on stage."
+      ],
+      "next": "happy-ending",
+      "side": "",
+      "actions": []
+    },
+    "happy-ending": {
+      "id": "happy-ending",
+      "background": "Thats All Folks.jpg",
+      "title": "Happy Ending I",
+      "text": [
+        "Mum and Dad wipe tears of joy and hug you and proclaim how proud they are as they finish watching the concert video again. ‘It was a great night!’, they say again.",
+        "You are supporting yourself through school now with the help of the scholarship. Finally you understand it was your efforts that got you there, it was all you.",
+        "Through every twist and turn you made a decision and you handled the consequences. It wasn’t always easy but you’re happier than ever."
+      ],
+      "next": "happy-ending-ii",
+      "side": "",
+      "actions": []
+    },
+    "happy-ending-ii": {
+      "id": "happy-ending-ii",
+      "background": "Thats All Folks.jpg",
+      "title": "Happy Ending II",
+      "text": [
+        "Dee is coming to visit soon and you start making plans. Lucky you had FriendBook to organise everything. What did people do before that existed!?",
+        "You look over recent FriendBook posts and realise now that your conversations are about the direction your lives are heading now. No more frivolous clips and trivia.",
+        "Friends are no longer a way to pass time. You now cherish them dearly and get to know each other better than ever. There's less friends now but they mean more to you."
+      ],
+      "next": "happy-ending-iii",
+      "side": "",
+      "actions": []
+    },
+    "happy-ending-iii": {
+      "id": "happy-ending-iii",
+      "background": "Thats All Folks.jpg",
+      "title": "Happy Ending III",
+      "text": [
+        "You look at the acoustic guitar that got you through that night and wonder. He’d brought it as your gift after the concert but you found it just when you really needed it",
+        "Your music teacher seems to always be there with help and words of wisdom just when you need it most. And yet somehow he makes it seem as if you knew it all along.",
+        "Thinking back on all the times you doubted yourself. If you’d only closed your eyes and let the music guide you, the way it always has."
+      ],
+      "next": "the-end",
+      "side": "",
+      "actions": []
+    },
+    "the-end": {
+      "id": "the-end",
+      "background": "TheVeryEnd.png",
+      "title": "The End",
+      "text": [],
+      "next": "",
+      "side": "",
+      "actions": []
+    }
+  }
+}

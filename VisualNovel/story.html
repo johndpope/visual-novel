@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>5th Door - Visual Novel - OUA BITS</title>
+
+    <link rel="shortcut icon" href="images/bookmark-icon.png">
+	<link rel="stylesheet" href="styles/story.css" type="text/css" />
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="scripts/story.js"></script>
+</head>
+
+<body>
+	<div id="cover">
+		<div id="start" class="start-btn cta-btn">Start</div>
+		<div class="cover-authors">
+			<div style="font-weight: bold; margin-bottom: 5px">Story By</div>
+			<div><img class="authors" src="images/ryan.png" /><span>Ryan Kita (3644493)</span></div>
+			<div><img class="authors" src="images/tony.png" /><span>Tony Gorgioski (3495512)</span></div>
+			<div><img class="authors" src="images/dee.png" /><span>Deidre Ferreira (3550192)</span></div>
+			<div><img class="authors" src="images/ian.png" /><span>Ian Maxwell Barnett (8555204)</span></div>
+		</div>
+	</div>
+	
+	<div id="narrative">
+		<div id="text" title="This is a paragraph story text. Use Up / Down to scroll through text."></div>
+		<div id="prevText" class="textScroll" title="Use Up Arrow key to scroll text back"><div class="arrow-up"></div></div>
+		<div id="moreText" class="textScroll" title="Use Down Arrow key to scroll text forward"><div class="arrow-down"></div></div>
+		<div id="lastPage" class="pageTurn lastPage" title="Use Left Arrow key to return to last page"><div class="arrow-left"></div></div>
+		<div id="nextPage" class="pageTurn nextPage" title="Use Right Arrow key to advance to next page"><div class="arrow-right"></div></div>
+		
+		<div id="quickBookmark" class="quick-btn" title="Bookmark Story"><img src="images/bookmark-icon.png" /></div>
+		<div id="quickRestart" class="quick-btn" title="Restart Story"><img src="images/restart-icon.png" /></div>
+		<div id="sidePage" class="sidepage-btn" title="Use Escape key to switch between story and thoughts"></div>
+		
+		<img id="stage-left" class="sprite x-left" src="" />
+		<img id="stage-center" class="sprite x-center" src="" />
+		<img id="stage-right" class="sprite x-right" src="" />
+		<img id="stage-left-even" class="sprite x-left" src="" />
+		<img id="stage-center-even" class="sprite x-center" src="" />
+		<img id="stage-right-even" class="sprite x-right" src="" />
+		
+		<div id="restart" class="restart-btn cta-btn">Restart</div>
+		<div id="credits" class="credits-btn cta-btn">Credits</div>
+	</div>
+	
+	<div id="decider">
+		<div id="question"></div>
+		<div id="optionA" class="choice" title="Use Left Arrow key to take this path"></div>
+		<div id="optionB" class="choice" title="Use Right Arrow key to take this path"></div>
+	</div>
+
+	<script>
+		/* global $ actions */
+		$().ready(function() {
+			actions.initStory();
+		});
+	</script>
+	
+</body>
+</html>
